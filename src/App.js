@@ -1,16 +1,15 @@
 
 import './App.css';
+import Body from './components/Body';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      
        
-        <p>
-          Mi primera App con React
-        </p>
-        
-      </header>
+        <NavBar></NavBar>
+        <Body></Body>
     </div>
   );
 }
