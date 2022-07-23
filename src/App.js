@@ -1,6 +1,7 @@
 
 import './App.css';
 import Body from './components/Body';
+import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
 
 function App() {
@@ -8,8 +9,9 @@ function App() {
     <div className="App">
       
        
-        <NavBar></NavBar>
-        <Body></Body>
+        <NavBar/>
+        <ItemListContainer titulo='Tienda de Mascotas Huellitas'></ItemListContainer>
+        <Body/>
     </div>
   );
 }
