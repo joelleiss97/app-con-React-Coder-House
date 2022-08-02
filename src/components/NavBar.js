@@ -1,34 +1,38 @@
-import './NavBar.css';
-import   LogoMascotas from '../mascotas.png';
-import CartWidget from './CartWidget';
-function NavBar() {
+
+import {Navbar, Nav, Container} from "react-bootstrap";
+import {  Link } from "react-router-dom";
+import LogoDonuts from "../logoDonuts2.png"
+import './NavBar.css'
+import CartWidget from "./CartWidget";
+function NavBarExample  ()  {
     return(
-        <header className='Navbar'>
-            <span>
-            <img className='nav-logo' src={LogoMascotas} alt="mascotas.png"
-                style={{
-                    bottom: '20px',
-                    width: '150px',
-                    padding: '150px'
-                    
-                }}
-                ></img>
-            </span>
-            <div className='nav-items'>
-                <a href="/home">Home</a>
-                <a href="/productos">Productos</a>
-                <a href="/servicio">Servicio</a>
-                <a href="/contacto">Contacto</a>
-            </div>
-            
-            <div className='nav-spac'>
-                <div className='bar'></div>
-                <CartWidget></CartWidget>
-            </div>
-            
-            
-        </header>
-    );
+        <>
+        
+        <Navbar className="navBg" variant="dark" expand="lg">
+            <Container>
+                <Navbar.Brand as={Link} to="/" className="LogoNav"  >
+                    <img src={LogoDonuts} alt="logoDonuts2.png"></img>     
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                    <Nav.Link as={Link} to="/">Home</Nav.Link>
+                    <Nav.Link as={Link} to="/Productos">Productos</Nav.Link>
+                    <Nav.Link as={Link} to="/Contacto">Contacto</Nav.Link>
+                    <CartWidget></CartWidget>
+                </Nav>
+                
+                </Navbar.Collapse>
+                
+            </Container>
+        </Navbar>
+        
+
+        
+        </>
+  
+  );
 }
 
-export default NavBar;
+
+export default NavBarExample;
