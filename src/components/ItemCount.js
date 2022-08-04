@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import LogoDonuts from "../logoDonuts2.png"
+
     
 
 import './ItemCount.css';
@@ -16,7 +16,6 @@ const ItemCount = ({ onAdd, initial, stock }) => {
 
   return (
     <div className="countContainer">
-        <img src={LogoDonuts} alt="logoDonuts2.png"></img>
       <div className="countContador">
         <button
           className="countButton"
@@ -43,7 +42,7 @@ const ItemCount = ({ onAdd, initial, stock }) => {
         }}
         disabled={stock === 0 ? true : null}
       >
-        Agregar Producto..
+        Agregar al carrito
       </button>
     </div>
   );
